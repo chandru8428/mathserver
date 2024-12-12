@@ -30,7 +30,7 @@ Publish the website in the given URL.
 
 # PROGRAM :
 mathserver.html
-
+```
      <html>
     <head>
         <title>FindPower</title>
@@ -203,11 +203,11 @@ mathserver.html
         </div>
     </body>
     </html>
-
+```
 # Create your views here.
 
     views.py
-
+```
     from django.shortcuts import render
 from django.shortcuts import render 
 def findpower(request): 
@@ -228,9 +228,9 @@ def findpower(request):
         context['R'] = R
         print('Power=',Power) 
     return render(request,'mathapp/mathserver.html',context)
-
+```
     urls.py
-
+```
     from django.contrib import admin 
 from django.urls import path 
 from mathapp import views 
@@ -240,7 +240,7 @@ urlpatterns = [
     path('',views.findpower,name="mathserverroot")
 ]
 
-
+```
 # SERVER SIDE PROCESSING:
 ![alt text](<Screenshot 2024-12-06 200335.png>)
 
